@@ -23,7 +23,7 @@ const router = createBrowserRouter([
   {
     path: '/product/:id',
     element: <Product></Product>,
-    loader: async ({ request, params }) => {
+    loader: async ({ params }) => {
       if (params.id) {
         return productLoader(params.id)
       }
